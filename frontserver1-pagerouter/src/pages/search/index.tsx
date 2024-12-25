@@ -1,4 +1,8 @@
-export default function Page() {
+import { useRouter } from "next/router"
 
-  return <h1>Search</h1>
+export default function Page() {
+  const router = useRouter();
+  const { q } = router.query;
+  
+  return <h1>Search Condition: {q}</h1>
 }
